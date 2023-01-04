@@ -1,8 +1,14 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { Model } from 'objection';
+import { AppModule } from './app/infrastructure/http/app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  
+  // Initialize knex
+  // const knex = require('knex')(knexConfig.development);
+  // Model.knex(knex);
+
   await app.listen(3000);
 }
 bootstrap();

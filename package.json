@@ -26,6 +26,8 @@
     "@nestjs/platform-express": "^9.2.1",
     "@nestjs/typeorm": "^9.0.1",
     "knex": "^2.3.0",
+    "nestjs-objection": "^3.0.0",
+    "object": "^0.1.1",
     "objection": "^3.0.1",
     "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
