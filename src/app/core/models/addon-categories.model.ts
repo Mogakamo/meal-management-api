@@ -1,6 +1,6 @@
 import { BaseModel } from './base.model';
 
-export class AddonCategories extends BaseModel {
+export class AddonCategoriesModel extends BaseModel {
   static tableName = 'addon-categories';
 
   name: string;
