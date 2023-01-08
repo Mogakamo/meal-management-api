@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Patch, Post, Put } from '@nestjs/common';
 import { MealAddonsModel } from 'src/app/core/models/meal-addons.model';
 import { MealAddonsService } from 'src/app/core/services/meal-addons.service';
 
@@ -21,8 +21,8 @@ export class MealAddonsController {
     return await this.mealAddonsService.createMealAddon(data);
   }
 
-  @Put(':id')
-  async updateMealAddon(id: number, data: Partial<MealAddonsModel>) {
+  @Patch(':id')
+  async updateMealAddon(id: number, @Body() data: Partial<MealAddonsModel>) {
     return await this.mealAddonsService.updateMealAddon(id, data);
   }
 
