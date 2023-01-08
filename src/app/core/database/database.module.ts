@@ -20,8 +20,14 @@ const providers = [
     useFactory: async () => {
       const knex = Knex.default({
         client: 'pg',
-        connection: process.env.DATABASE_URL,
-        debug: process.env.KNEX_DEBUG === 'true',
+        connection: {
+          database: 'railway',
+          user: 'postgres',
+          password: 'l0RS3tx3FYkfcRqadujD',
+          host: 'containers-us-west-118.railway.app',
+          port: 6804,
+        },
+        // debug: process.env.KNEX_DEBUG === 'true',
         ...knexSnakeCaseMappers(),
       });
 
